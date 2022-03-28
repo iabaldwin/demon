@@ -79,7 +79,7 @@ set_target_properties( multivih5datareaderop PROPERTIES DEBUG_POSTFIX "_debug" )
 set_target_properties( multivih5datareaderop PROPERTIES COMPILE_FLAGS "-std=c++11 ${OpenMP_CXX_FLAGS} -Wabi-tag" )
 set_target_properties( multivih5datareaderop PROPERTIES LINK_FLAGS "${OpenMP_CXX_FLAGS}" )
 # use old ABI with gcc 5.x
-set_target_properties( multivih5datareaderop PROPERTIES COMPILE_DEFINITIONS "_GLIBCXX_USE_CXX11_ABI=0" )
+set_target_properties( multivih5datareaderop PROPERTIES COMPILE_DEFINITIONS "_GLIBCXX_USE_CXX11_ABI=1" )
 add_dependencies( multivih5datareaderop lz4 webp )
 
 target_include_directories( multivih5datareaderop PRIVATE
